@@ -25,7 +25,7 @@ export default class App extends Component {
     )
   }
 
-  handleCategorySelected = category => {
+  handleCategorySelected = (category) => {
     this.setState({
       category
     })
