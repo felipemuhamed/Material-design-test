@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
-import Header from "./Layouts/Header";
-import Footer from "./Layouts/Footer";
+import Header from "./Layouts/Header"
+import Footer from "./Layouts/Footer"
 import Exercises from "./Exercises";
 import { muscles, exercises } from "../store.js";
 

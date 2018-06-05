@@ -5,14 +5,14 @@ import {
   ListItemText,
   ListItemSecondaryAction
 } from "material-ui/List";
-
-import { Delete, Edit } from "material-ui-icons";
+import { Edit, Delete } from "material-ui-icons";
 import Form from "./Form";
 
 const styles = {
   Paper: {
     padding: 20,
-    margin: 10,
+    marginTop: 10,
+    marginBottom: 10,
     height: 500,
     overflowY: "auto"
   }
@@ -22,8 +22,9 @@ export default ({
   muscles,
   exercises,
   category,
-  onSelect,
   editMode,
+  onSelect,
+  exercise,
   exercise: {
     id,
     title = "Welcome!",
@@ -69,7 +70,7 @@ export default ({
     <Grid item sm>
       <Paper style={styles.Paper}>
         {editMode ? (
-          <Form muscles={muscles} onSubmit={onEdit} />
+          <Form exercise={exercise} muscles={muscles} onSubmit={onEdit} />
         ) : (
           <Fragment>
             <Typography variant="display1">{title}</Typography>
